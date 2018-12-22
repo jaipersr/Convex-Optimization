@@ -5,7 +5,8 @@ ChE488 Convex Optimization
 
 The following code finds the optimal replenishment plan over the course of 5 months
 for a small startup retailer and supplier selling t-shirts. The code contains 
-3 function. One for the retailer case, supplier case, and the combined case. 
+3 functions. One for the retailer case, supplier case, and the combined case.
+
 For the independent case:
 The code passes the market demand vector to retailer case which returns the the retailer's optimal plan.
 The optimal plan for the retailer is then sent to the supplier case since the ordering amount 
@@ -14,13 +15,11 @@ the replenishment strategy for the supplier. Under the independent case the code
 reduces the BILP to solve 64 LPs. 
 
 For the combined case:
-The market demand is sent to the combined case.Under the combine case the code 
-reduces the BILP to solve 1024 LPs. The increase in LPs is due to to increase
+The market demand is sent to the combined case. Under the combined case the code 
+reduces the BILP to solve 1024 LPs. The increase in LPs is due to an increase
 in variables and constraints that must be solved for to minimize the objective function.
 
 PuLP is used to solved the reduced BILP
-
-
 """
 
 import numpy as np
